@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+abstract class shapee
+{
+	
+	Scanner sc=new Scanner(System.in);
+	double size1;
+	double size2;
+	abstract void input();
+	abstract void comput_area();
+	
+}
+class trianglee extends shapee
+{
+	 Scanner sc=new Scanner(System.in);
+	 
+	 void input()
+	 {
+		 System.out.println("Enter height of triangle :");
+		 size1=sc.nextDouble();
+		 System.out.println("Enter base of triangle :");
+		 size2=sc.nextDouble();
+	 }
+	 void comput_area()
+	 {
+		double area= (0.5*size1*size2);
+		System.out.println("Area  of triangle :"+area);
+				 
+	 }
+	 
+}
+class rectanglee extends shapee
+{
+	Scanner sc=new Scanner(System.in);
+	
+	void input()
+	{
+		System.out.println("Enter length of rectangle :");
+		 size1=sc.nextDouble();
+		 System.out.println("Enter breadth of rectangle :");
+		 size2=sc.nextDouble();
+		
+	}
+	void comput_area()
+	 {
+		 double area= (size1*size2);
+		System.out.println("Area  of rectangle :"+area);
+				 
+	 }
+	
+}
+
+public class prac_4 
+{
+	public static void main(String args[])
+	  {
+			java.util.Scanner sc=new Scanner(System.in);
+			System.out.println("1 Area of triangle :");
+			System.out.println("2 Area of rectangle :");
+			System.out.println("\n"+"Enter option :");
+			int n=sc.nextInt();
+					
+			switch(n)
+			{
+			case 1:
+				  shapee t=new trianglee();
+				  t.input();
+				  t.comput_area();
+				  break;
+			case 2:
+				shapee r=new rectanglee();
+				  r.input();
+				  r.comput_area();
+				  break;
+				
+			}
+	  }
+}
+
+
+
+
+
+
+
+
+	
