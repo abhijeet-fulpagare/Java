@@ -1,0 +1,33 @@
+import java.util.*;
+public 
+class exp 
+{
+	public static void main(String [] args)
+	{
+       Scanner sc=new Scanner(System.in);
+       int num1,num2;
+       float ans;
+       try
+        {
+    	    num1= Integer.parseInt(sc.next());
+    	    num2= Integer.parseInt(sc.next());
+    	    try
+    	     {
+    		 ans=num1/num2;
+    		 System.out.println("division ="+ans);
+    	     }
+    	     catch(ArithmeticException e)
+    	      {
+    		     System.out.println("ArithmeticException occurred");
+    	      }
+        }
+       catch (NumberFormatException e) 
+        {
+           System.out.println("NumberFormatException occurred");
+        }
+       catch(ArrayIndexOutOfBoundsException a)
+        {
+    	   System.out.println("ArrayIndexOutOfBoundsException occurred");
+        }
+    }
+}
